@@ -515,27 +515,17 @@
     .sobre-img-placeholder {
       width: 100%;
       aspect-ratio: 4/3;
-      background: var(--gray-light);
       border-radius: var(--radius-lg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 12px;
-      color: var(--gray-mid);
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 13px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      border: 2px dashed var(--gray-light);
       overflow: hidden;
+      display: block;
     }
 
-    /* Substitua .sobre-img-placeholder por <img> */
     .sobre-img-placeholder img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: block;
+      border-radius: var(--radius-lg);
     }
 
     .sobre-badge {
@@ -1652,12 +1642,7 @@
   <!-- ─── HERO ─── -->
   <section id="home" class="hero">
     <div class="hero-img">
-      <!-- SUBSTITUA pelo componente abaixo com sua imagem real: -->
-      <!-- <img src="sua-foto-piso.jpg" alt="Proteção de piso durante obra em Boa Vista RR" loading="eager" /> -->
-      <div class="hero-img-placeholder">
-        <svg viewBox="0 0 64 64" width="48" height="48"><rect x="8" y="8" width="20" height="20" rx="2" fill="currentColor"/><rect x="36" y="8" width="20" height="20" rx="2" fill="currentColor"/><rect x="8" y="36" width="20" height="20" rx="2" fill="currentColor"/><rect x="36" y="36" width="20" height="20" rx="2" fill="currentColor"/></svg>
-        Inserir foto da obra aqui
-      </div>
+      <img src="1777572949682_2026-01-14__1_.png" alt="Proteção de piso em área externa durante obra em Boa Vista RR — Protege Piso" loading="eager" />
     </div>
 
     <div class="hero-content">
@@ -1709,11 +1694,7 @@
     <div class="container">
       <div class="sobre-grid">
         <div class="sobre-img-wrap">
-          <!-- SUBSTITUA por: <img src="foto-equipe-ou-obra.jpg" alt="Equipe Protege Piso Boa Vista instalando proteção" /> -->
-          <div class="sobre-img-placeholder">
-            <svg viewBox="0 0 64 64" width="40" height="40"><rect x="8" y="16" width="48" height="32" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="32" r="8" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-            Inserir foto da equipe ou instalação
-          </div>
+          <img src="1777572949675_2026-01-14__4_.png" alt="Instalação de proteção de piso Protege Piso Boa Vista em obra" loading="lazy" />
           <div class="sobre-badge">
             <div class="sobre-badge-num">+18</div>
             <div class="sobre-badge-label">Anos de experiência<br />nacional</div>
@@ -1907,43 +1888,27 @@
       </div>
 
       <div class="galeria-grid">
-        <!-- Item 1: maior (substitua por <img>) -->
+        <!-- Galeria 1: maior -->
         <div class="galeria-item">
-          <div class="galeria-placeholder">
-            <svg viewBox="0 0 48 48" width="32" height="32"><rect x="4" y="4" width="40" height="40" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="18" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 34l10-10 8 8 6-6 16 12" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-            Foto Principal — Antes / Depois
-          </div>
-          <div class="galeria-label">Antes e Depois — Instalação Residencial</div>
+          <img src="1777572949681_2026-01-14.jpg" alt="Proteção de piso em escada e hall — Protege Piso Boa Vista" loading="lazy" />
+          <div class="galeria-label">Escada + Piso — Instalação Residencial</div>
         </div>
 
-        <!-- Items 2-5 (substitua por <img>) -->
         <div class="galeria-item">
-          <div class="galeria-placeholder" style="font-size:11px;">
-            <svg viewBox="0 0 48 48" width="28" height="28"><rect x="4" y="4" width="40" height="40" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="18" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 34l10-10 8 8 6-6 16 12" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-            Foto 2
-          </div>
-          <div class="galeria-label">Obra Comercial — Boa Vista</div>
+          <img src="1777572949682_2026-01-14.png" alt="Proteção de degraus de escada com placas Protege Piso em Boa Vista" loading="lazy" />
+          <div class="galeria-label">Escadas Protegidas — Boa Vista</div>
         </div>
         <div class="galeria-item">
-          <div class="galeria-placeholder" style="font-size:11px;">
-            <svg viewBox="0 0 48 48" width="28" height="28"><rect x="4" y="4" width="40" height="40" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="18" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 34l10-10 8 8 6-6 16 12" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-            Foto 3
-          </div>
-          <div class="galeria-label">Escadas Protegidas</div>
+          <img src="1777572949683_2026-01-14__2_.png" alt="Proteção de piso em área externa com placas Protege Piso" loading="lazy" />
+          <div class="galeria-label">Área Externa — Placas Instaladas</div>
         </div>
         <div class="galeria-item">
-          <div class="galeria-placeholder" style="font-size:11px;">
-            <svg viewBox="0 0 48 48" width="28" height="28"><rect x="4" y="4" width="40" height="40" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="18" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 34l10-10 8 8 6-6 16 12" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-            Foto 4
-          </div>
-          <div class="galeria-label">Porcelanato de Alto Padrão</div>
+          <img src="1777572949685_2026-01-14__3_.png" alt="Proteção de piso interno em obra residencial — Protege Piso Boa Vista" loading="lazy" />
+          <div class="galeria-label">Piso Interno — Cobertura Total</div>
         </div>
         <div class="galeria-item">
-          <div class="galeria-placeholder" style="font-size:11px;">
-            <svg viewBox="0 0 48 48" width="28" height="28"><rect x="4" y="4" width="40" height="40" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="18" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 34l10-10 8 8 6-6 16 12" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-            Foto 5
-          </div>
-          <div class="galeria-label">Área Externa — Resultado Final</div>
+          <img src="1777572949682_2026-01-14__1_.png" alt="Proteção de piso em varanda e área externa durante reforma em Boa Vista" loading="lazy" />
+          <div class="galeria-label">Varanda — Área Externa Protegida</div>
         </div>
       </div>
     </div>
