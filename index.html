@@ -1385,43 +1385,180 @@
     .mobile-menu a:hover { color: var(--green); }
 
     /* ─── RESPONSIVE ─── */
+    /* ── TABLET (≤1024px) ── */
     @media (max-width: 1024px) {
       .hero { grid-template-columns: 1fr; }
       .hero-img { display: none; }
-      .hero-content { padding: 72px 32px 64px; }
+      .hero-content { padding: 80px 32px 64px; }
       .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
       .steps-grid::before { display: none; }
       .servicos-grid { grid-template-columns: repeat(2, 1fr); }
       .dif-grid { grid-template-columns: repeat(2, 1fr); }
       .footer-grid { grid-template-columns: 1fr 1fr; }
+      .dep-grid { grid-template-columns: repeat(2, 1fr); }
+      .atend-grid { grid-template-columns: 1fr; gap: 36px; }
     }
 
+    /* ── MOBILE (≤768px) ── */
     @media (max-width: 768px) {
+      /* Header */
       nav { display: none; }
       .hamburger { display: flex; }
-      section { padding: 64px 20px; }
-      .sobre-grid { grid-template-columns: 1fr; gap: 48px; }
-      .sobre-badge { bottom: 10px; right: 10px; }
-      .steps-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-      .servicos-grid { grid-template-columns: 1fr; }
-      .dif-grid { grid-template-columns: 1fr; }
-      .galeria-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
-      .galeria-item:first-child { grid-row: span 1; }
-      .videos-grid { grid-template-columns: 1fr; }
-      .dep-grid { grid-template-columns: 1fr; }
-      .atend-grid { grid-template-columns: 1fr; }
-      .faq-grid { grid-template-columns: 1fr; }
-      .cta-form { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-      .hero-stats { gap: 24px; flex-wrap: wrap; }
+      .header-inner { height: 60px; padding: 0 16px; }
+      .logo-city { display: none; }
+
+      /* Hero margin adjust for smaller header */
+      .hero { margin-top: 60px; }
+
+      /* Sections */
+      section { padding: 52px 16px; }
+      #contato { padding: 60px 16px; }
+
+      /* Hero */
+      .hero { min-height: auto; }
+      .hero-content { padding: 80px 20px 52px; }
+      .hero h1 { font-size: clamp(2rem, 7vw, 2.8rem); }
+      .hero-sub { font-size: 0.95rem; }
+      .hero-ctas { flex-direction: column; gap: 10px; }
+      .btn-primary, .btn-secondary { width: 100%; justify-content: center; padding: 14px 20px; font-size: 15px; }
+      .hero-stats { gap: 20px; flex-wrap: wrap; margin-top: 32px; padding-top: 24px; }
+      .hero-stat-num { font-size: 1.8rem; }
+      .hero-stat-label { font-size: 0.7rem; }
+      .hero-tag { font-size: 10px; padding: 5px 10px; }
+
+      /* Sobre */
+      .sobre-grid { grid-template-columns: 1fr; gap: 32px; }
+      .sobre-img-wrap { order: -1; }
+      .sobre-badge {
+        position: relative;
+        bottom: auto; right: auto;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 20px;
+        border-radius: var(--radius);
+        margin-top: 16px;
+      }
+      .sobre-badge-num { font-size: 2rem; }
+
+      /* Steps */
+      .steps-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+      .step-num { width: 56px; height: 56px; font-size: 1.5rem; }
+      .step-title { font-size: 1rem; }
+      .step-desc { font-size: 0.85rem; }
+
+      /* Serviços */
+      .servicos-grid { grid-template-columns: 1fr; gap: 14px; }
+      .servico-card { padding: 22px 20px; }
+
+      /* Diferenciais */
+      .dif-grid { grid-template-columns: 1fr; gap: 14px; }
+      .dif-card { padding: 24px 20px; }
+      .dif-num { font-size: 2.5rem; }
+
+      /* Galeria */
+      .galeria-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 8px;
+      }
+      .galeria-item:first-child { grid-row: span 1; grid-column: span 2; }
+      .galeria-grid > .galeria-item:first-child { height: 240px; }
+      .galeria-grid > .galeria-item { height: 160px; }
+
+      /* Vídeos */
+      .videos-grid { grid-template-columns: 1fr; gap: 20px; }
+
+      /* Depoimentos */
+      .dep-grid { grid-template-columns: 1fr; gap: 16px; }
+      .dep-card { padding: 24px 20px; }
+
+      /* Atendimento */
+      .atend-grid { grid-template-columns: 1fr; gap: 32px; }
+      .map-wrap { height: 280px; }
+      .municipios-list { grid-template-columns: 1fr 1fr; gap: 8px; }
+
+      /* FAQ */
+      .faq-grid { grid-template-columns: 1fr; gap: 10px; }
+      .faq-q { font-size: 0.95rem; padding: 16px 18px; }
+
+      /* CTA */
+      .cta-inner { padding: 0 4px; }
+      #contato .section-title { font-size: 2rem; }
+      .cta-buttons { flex-direction: column; align-items: stretch; gap: 12px; }
+      .btn-white, .btn-outline-white {
+        width: 100%;
+        justify-content: center;
+        padding: 16px 20px;
+        font-size: 15px;
+      }
+      .cta-form {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 24px 16px;
+      }
+
+      /* Footer */
+      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; text-align: center; gap: 8px; }
+      .footer-desc { max-width: 100%; }
+
+      /* Section titles */
+      .section-title { font-size: clamp(1.7rem, 6vw, 2.4rem); }
+
+      /* Floating WPP */
+      .wpp-float { bottom: 16px; right: 16px; width: 52px; height: 52px; }
+      .wpp-float svg { width: 26px; height: 26px; }
     }
 
+    /* ── SMALL MOBILE (≤480px) ── */
     @media (max-width: 480px) {
+      /* Hero */
+      .hero-content { padding: 72px 16px 48px; }
+      .hero h1 { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+      .hero-stats { justify-content: space-between; }
+      .hero-stat-num { font-size: 1.6rem; }
+
+      /* Steps */
+      .steps-grid { grid-template-columns: 1fr; gap: 24px; }
+      .step { align-items: flex-start; text-align: left; flex-direction: row; gap: 16px; }
+      .step-num { width: 48px; height: 48px; font-size: 1.3rem; flex-shrink: 0; margin-bottom: 0; }
+
+      /* Galeria */
       .galeria-grid { grid-template-columns: 1fr; }
-      .steps-grid { grid-template-columns: 1fr; }
+      .galeria-item:first-child { grid-column: span 1; height: 220px; }
+      .galeria-grid > .galeria-item { height: 200px; }
+
+      /* Municipios */
       .municipios-list { grid-template-columns: 1fr; }
-      .hero-ctas { flex-direction: column; }
-      .cta-buttons { flex-direction: column; align-items: center; }
+
+      /* Sobre badge inline */
+      .sobre-badge { width: 100%; justify-content: center; }
+
+      /* Serviços cards compactos */
+      .servico-card { padding: 18px 16px; }
+      .servico-icon { width: 44px; height: 44px; margin-bottom: 14px; }
+      .servico-name { font-size: 1.1rem; }
+
+      /* Diferenciais */
+      .dif-card { padding: 20px 16px; }
+
+      /* Depoimentos */
+      .dep-card { padding: 20px 16px; }
+
+      /* FAQ */
+      .faq-q { font-size: 0.88rem; padding: 14px 16px; }
+      .faq-a.open { padding: 16px; font-size: 0.88rem; }
+
+      /* Seção sobre */
+      .sobre-checks li { font-size: 0.9rem; }
+
+      /* Sections */
+      section { padding: 44px 16px; }
+      #contato { padding: 52px 16px; }
+
+      /* Section tag */
+      .section-tag { font-size: 11px; }
     }
 
     /* ─── SPLASH / INTRO SCREEN ─── */
