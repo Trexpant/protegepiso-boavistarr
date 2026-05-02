@@ -513,6 +513,7 @@
 
     .sobre-img-wrap {
       position: relative;
+      padding-bottom: 0;
     }
 
     .sobre-img-placeholder {
@@ -541,6 +542,7 @@
       padding: 20px 24px;
       text-align: center;
       box-shadow: var(--shadow-lg);
+      z-index: 2;
     }
 
     .sobre-badge-num {
@@ -1446,19 +1448,35 @@
       .hero-tag { font-size: 10px; padding: 5px 10px; }
 
       /* Sobre */
-      .sobre-grid { grid-template-columns: 1fr; gap: 32px; }
-      .sobre-img-wrap { order: -1; }
+      .sobre-grid { grid-template-columns: 1fr; gap: 0; }
+      .sobre-img-wrap {
+        order: -1;
+        width: 100%;
+        overflow: hidden;
+        padding-bottom: 0;
+        margin-bottom: 20px;
+      }
+      .sobre-img-placeholder {
+        width: 100%;
+        aspect-ratio: 16/9;
+        border-radius: var(--radius);
+      }
+      .sobre-img-placeholder img {
+        border-radius: var(--radius);
+      }
       .sobre-badge {
         position: relative;
-        bottom: auto; right: auto;
+        bottom: auto;
+        right: auto;
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        padding: 12px 20px;
+        padding: 10px 18px;
         border-radius: var(--radius);
-        margin-top: 16px;
+        margin-top: 14px;
+        box-shadow: var(--shadow);
       }
-      .sobre-badge-num { font-size: 2rem; }
+      .sobre-badge-num { font-size: 1.8rem; }
 
       /* Steps */
       .steps-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
